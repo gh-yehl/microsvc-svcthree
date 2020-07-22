@@ -25,6 +25,12 @@ public class Service3Application {
         SpringApplication.run(Service3Application.class, args);
     }
 
+    @RequestMapping("/test")
+    public String test(){
+        System.out.println("Service-3 called... from /test");
+        return "Svc3 is responding ...";
+    }
+    
     @RequestMapping("/call3")
     public String call3(){
         System.out.println("Service-3 called...");
